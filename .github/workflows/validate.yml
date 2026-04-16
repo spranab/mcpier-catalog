@@ -1,0 +1,34 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate catalog.json parses
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('catalog.json','utf8'))"
+      - name: Check entries resolve a pier.yaml
+        run: |
+          node -e "
+          const fs = require('fs');
+          const cat = JSON.parse(fs.readFileSync('catalog.json','utf8'));
+          if (cat.version !== 1) { console.error('unsupported version'); process.exit(1); }
+          const seen = new Set();
+          for (const e of cat.entries) {
+            if (seen.has(e.name)) { console.error('duplicate entry', e.name); process.exit(1); }
+            seen.add(e.name);
+            if (!e.source) { console.error('missing source', e.name); process.exit(1); }
+            const m = e.source.match(/^github:([^/]+)\/([^/]+)/);
+            if (!m) { console.error('unsupported source scheme', e.source); process.exit(1); }
+          }
+          console.log('ok —', cat.entries.length, 'entries');
+          "

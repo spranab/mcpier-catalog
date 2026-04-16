@@ -1,0 +1,15 @@
+name: fetch
+description: Fetch a URL and return its content — no browser, just HTTP.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/fetch
+tags: [official, web, python]
+
+transport: stdio
+runtime: python
+package: mcp-server-fetch
+args: []
+
+# Pure outbound HTTP — ideal remote candidate; all clients share the same Pier egress.
+remote_eligible: true
+
+secrets: []
+env: {}

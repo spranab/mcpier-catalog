@@ -1,0 +1,15 @@
+name: playwright
+description: Browser automation from Microsoft — multi-browser, screenshots, accessibility tree.
+homepage: https://github.com/microsoft/playwright-mcp
+tags: [microsoft, browser, node]
+
+transport: stdio
+runtime: node
+package: "@playwright/mcp"
+args: []
+
+# Spawns a real browser — heavy and client-session-specific. Run locally.
+remote_eligible: false
+
+secrets: []
+env: {}

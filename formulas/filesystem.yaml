@@ -1,0 +1,17 @@
+name: filesystem
+description: Local filesystem access — read, write, list files in a sandboxed directory.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem
+tags: [official, fs, node]
+
+transport: stdio
+runtime: node
+package: "@modelcontextprotocol/server-filesystem"
+# The MCP accepts one or more allowed-directory paths as positional args.
+# Edit this after install to point at your project folder(s).
+args: [/home/user/projects]
+
+# Touches the client's filesystem — must run on each client, not on the Pier host.
+remote_eligible: false
+
+secrets: []
+env: {}

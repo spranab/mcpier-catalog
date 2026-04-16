@@ -1,0 +1,19 @@
+# Formula for the official Git MCP server (modelcontextprotocol/servers, Python).
+# Requires `uv` installed on the client machine for `location: local`,
+# or on the Pier host for `location: remote` (once stdio-spawn lands).
+name: mcp-server-git
+description: Git repository operations (log, diff, branch, commit) via MCP.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/git
+tags: [git, python, official]
+
+transport: stdio
+runtime: python
+package: mcp-server-git
+args: []
+
+# Stateful access to local filesystem — cannot run remotely on the Pier host
+# if clients want to reference their own repos. Must install local on each client.
+remote_eligible: false
+
+secrets: []
+env: {}

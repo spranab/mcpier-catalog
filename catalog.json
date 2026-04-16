@@ -1,0 +1,98 @@
+{
+  "name": "mcpier-official",
+  "version": 1,
+  "updated": "2026-04-16",
+  "description": "A small curated set to get started. For everything else, use 'Install from Git' in the UI or `pier install-git <url>` — any MCP repo with a pier.yaml is one paste away.",
+  "entries": [
+    {
+      "name": "filesystem",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Local filesystem access — read, write, list files in a sandboxed directory.",
+      "tags": ["official", "fs", "node"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/filesystem.yaml"
+    },
+    {
+      "name": "memory",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Knowledge-graph memory for persistent facts across conversations (official Anthropic reference).",
+      "tags": ["official", "memory", "node"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/memory.yaml"
+    },
+    {
+      "name": "sequential-thinking",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Structured step-by-step reasoning tool.",
+      "tags": ["official", "reasoning", "node"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/sequential-thinking.yaml"
+    },
+    {
+      "name": "fetch",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Fetch a URL and return its content — no browser, just HTTP. Official Python reference.",
+      "tags": ["official", "web", "python"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/fetch.yaml"
+    },
+    {
+      "name": "git",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Git repository operations — log, diff, branch, commit. Official Python reference.",
+      "tags": ["official", "git", "python"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/mcp-server-git.yaml"
+    },
+    {
+      "name": "time",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Timezone-aware time and date utilities. Official Python reference.",
+      "tags": ["official", "time", "python"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/mcp-server-time.yaml"
+    },
+    {
+      "name": "playwright",
+      "source": "github:microsoft/playwright-mcp",
+      "description": "Browser automation from Microsoft — multi-browser, screenshots, accessibility tree.",
+      "tags": ["microsoft", "browser", "node"],
+      "homepage": "https://github.com/microsoft/playwright-mcp",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/playwright.yaml"
+    },
+    {
+      "name": "context7",
+      "source": "github:upstash/context7",
+      "description": "Up-to-date library docs and code examples for LLM prompts (Upstash).",
+      "tags": ["upstash", "docs", "node"],
+      "homepage": "https://github.com/upstash/context7",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/context7.yaml"
+    },
+    {
+      "name": "brainstorm-mcp",
+      "source": "github:spranab/brainstorm-mcp",
+      "description": "Multi-model AI brainstorming — make GPT, Gemini, DeepSeek, and Claude debate in rounds.",
+      "tags": ["ai", "llm", "brainstorming", "node"],
+      "homepage": "https://github.com/spranab/brainstorm-mcp",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/brainstorm-mcp.yaml"
+    },
+    {
+      "name": "yantrikdb",
+      "source": "github:spranab/yantrikdb",
+      "description": "Persistent cognitive memory — recall/remember/graph across conversations.",
+      "tags": ["memory", "python", "ai"],
+      "homepage": "https://github.com/spranab/yantrikdb",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/yantrikdb.yaml"
+    }
+  ]
+}

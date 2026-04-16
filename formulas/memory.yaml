@@ -1,0 +1,17 @@
+name: memory
+description: Knowledge-graph memory for persistent facts across conversations.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/memory
+tags: [official, memory, node]
+
+transport: stdio
+runtime: node
+package: "@modelcontextprotocol/server-memory"
+args: []
+
+# Stateless protocol. Could run centrally, but the memory file is stored locally
+# per-MCP-instance, so sharing across clients isn't useful without coordination.
+remote_eligible: false
+
+secrets: []
+env:
+  MEMORY_FILE_PATH: /data/mcp-memory.jsonl

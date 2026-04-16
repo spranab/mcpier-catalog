@@ -1,0 +1,15 @@
+name: context7
+description: Up-to-date library docs and code examples for LLM prompts (Upstash).
+homepage: https://github.com/upstash/context7
+tags: [upstash, docs, node]
+
+transport: stdio
+runtime: node
+package: "@upstash/context7-mcp"
+args: []
+
+# Stateless doc fetcher — clean remote candidate.
+remote_eligible: true
+
+secrets: []
+env: {}

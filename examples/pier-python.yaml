@@ -1,0 +1,32 @@
+# Example pier.yaml for a Python-based MCP.
+# Drop this at the root of your MCP's repo; Pier fetches it from
+# raw.githubusercontent.com/<owner>/<repo>/main/pier.yaml
+
+name: my-python-mcp
+description: A short one-line description of what this MCP does.
+homepage: https://github.com/you/my-python-mcp
+tags: [python, your-domain]
+
+transport: stdio
+runtime: python              # Pier generates: `uvx my-python-mcp`
+package: my-python-mcp       # PyPI package name
+args: []                     # Extra CLI args after the package name
+
+# If true, Pier will offer a "remote (via pier)" install option.
+# Use this ONLY if your MCP is stateless / doesn't need the client's filesystem.
+remote_eligible: false
+
+secrets:
+  - key: some_api_key
+    label: Some API Key
+    help: https://provider.com/api-keys
+    required: true
+
+env:
+  SOME_API_KEY: "${some_api_key}"
+
+# Prerequisites on the client machine (or Pier host for remote mode):
+#   - `uv` — Astral's Python package runner. https://docs.astral.sh/uv/
+# If you need a different entry point, set `command:` explicitly, e.g.:
+#   command: python
+#   args: [-m, my_python_mcp]

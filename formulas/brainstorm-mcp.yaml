@@ -1,0 +1,37 @@
+name: brainstorm-mcp
+description: Multi-model AI brainstorming — make GPT, Gemini, DeepSeek, and Claude debate in rounds.
+homepage: https://github.com/spranab/brainstorm-mcp
+tags: [ai, llm, brainstorming, node]
+
+transport: stdio
+runtime: node
+package: brainstorm-mcp
+args: []
+
+# Calls cloud AI APIs — stateless, safe to run centrally on Pier.
+# Secrets live once on the homelab; never touch client machines.
+remote_eligible: true
+
+secrets:
+  - key: openai_key
+    label: OpenAI API Key
+    help: https://platform.openai.com/api-keys
+    required: false
+  - key: gemini_key
+    label: Google Gemini API Key
+    help: https://aistudio.google.com/apikey
+    required: false
+  - key: deepseek_key
+    label: DeepSeek API Key
+    help: https://platform.deepseek.com/api_keys
+    required: false
+  - key: anthropic_key
+    label: Anthropic API Key
+    help: https://console.anthropic.com/settings/keys
+    required: false
+
+env:
+  OPENAI_API_KEY: "${openai_key}"
+  GEMINI_API_KEY: "${gemini_key}"
+  DEEPSEEK_API_KEY: "${deepseek_key}"
+  ANTHROPIC_API_KEY: "${anthropic_key}"

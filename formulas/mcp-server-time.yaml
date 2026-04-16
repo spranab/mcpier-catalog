@@ -1,0 +1,16 @@
+name: mcp-server-time
+description: Timezone-aware time and date utilities via MCP.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/time
+tags: [time, python, official]
+
+transport: stdio
+runtime: python
+package: mcp-server-time
+args: []
+
+# Stateless — safe to run once on the Pier host and share across clients
+# (once the stdio-spawn bridge lands; today this will fall back to local).
+remote_eligible: true
+
+secrets: []
+env: {}

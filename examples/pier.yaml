@@ -1,0 +1,33 @@
+# Example pier.yaml — drop this at the root of your MCP's repo.
+# Pier fetches it from raw.githubusercontent.com/<owner>/<repo>/main/pier.yaml
+# when a user clicks "Install" from the catalog or pastes your repo URL.
+
+name: brainstorm-mcp
+description: Multi-model AI brainstorming — make GPT, Gemini, DeepSeek, and Claude debate in rounds.
+homepage: https://github.com/spranab/brainstorm-mcp
+tags: [ai, llm, brainstorming]
+
+transport: stdio
+runtime: node
+package: brainstorm-mcp       # npm package name — `npx -y brainstorm-mcp` runs it
+
+remote_eligible: true         # Safe to run on a shared Pier host (no client-filesystem access).
+
+secrets:
+  - key: openai_key
+    label: OpenAI API Key
+    help: https://platform.openai.com/api-keys
+    required: true
+  - key: gemini_key
+    label: Google Gemini API Key
+    help: https://aistudio.google.com/apikey
+    required: false
+  - key: deepseek_key
+    label: DeepSeek API Key
+    help: https://platform.deepseek.com/api_keys
+    required: false
+
+env:
+  OPENAI_API_KEY: "${openai_key}"
+  GEMINI_API_KEY: "${gemini_key}"
+  DEEPSEEK_API_KEY: "${deepseek_key}"

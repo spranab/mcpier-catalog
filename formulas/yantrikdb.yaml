@@ -1,0 +1,21 @@
+name: yantrikdb
+description: Persistent cognitive memory — recall/remember/graph across conversations.
+homepage: https://github.com/spranab/yantrikdb
+tags: [memory, python, ai]
+
+# YantrikDB can run as a local stdio MCP (install via uvx) OR as a shared
+# network service with SSE transport. The Pier-native pattern is to point
+# at an existing deployed YantrikDB instance — see below.
+
+transport: sse
+url: http://192.168.4.79:8420/sse
+headers:
+  Authorization: "Bearer ${yantrikdb_token}"
+
+remote_eligible: true
+
+secrets:
+  - key: yantrikdb_token
+    label: YantrikDB Bearer Token
+    help: https://github.com/spranab/yantrikdb#authentication
+    required: true

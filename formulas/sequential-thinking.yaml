@@ -1,0 +1,15 @@
+name: sequential-thinking
+description: Structured step-by-step reasoning tool.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking
+tags: [official, reasoning, node]
+
+transport: stdio
+runtime: node
+package: "@modelcontextprotocol/server-sequential-thinking"
+args: []
+
+# Pure-logic tool, no state, no filesystem — safe to run centrally on Pier.
+remote_eligible: true
+
+secrets: []
+env: {}
