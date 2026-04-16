@@ -1,0 +1,16 @@
+name: puppeteer
+description: Headless browser automation via Puppeteer.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer
+tags: [browser, automation, node]
+
+transport: stdio
+runtime: node
+package: "@modelcontextprotocol/server-puppeteer"
+args: []
+
+# Launches Chromium — heavy, per-session. Prefer local so each client has its
+# own browser process (and gets its own cookies, etc.).
+remote_eligible: false
+
+secrets: []
+env: {}

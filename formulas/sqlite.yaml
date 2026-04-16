@@ -1,0 +1,17 @@
+name: sqlite
+description: Query a SQLite database via MCP.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite
+tags: [db, sqlite, python]
+
+transport: stdio
+runtime: python
+package: mcp-server-sqlite
+# Database path is passed via --db-path; edit after install.
+args: [--db-path, /data/app.db]
+
+# Reads a DB file on the host running the MCP. For location:local, clients
+# supply their own paths. For location:remote, Pier's /data mount is used.
+remote_eligible: false
+
+secrets: []
+env: {}

@@ -1,0 +1,20 @@
+name: github
+description: GitHub repos, issues, PRs, and file operations via the GitHub REST API.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/github
+tags: [git, github, node]
+
+transport: stdio
+runtime: node
+package: "@modelcontextprotocol/server-github"
+args: []
+
+remote_eligible: true
+
+secrets:
+  - key: github_token
+    label: GitHub Personal Access Token
+    help: https://github.com/settings/personal-access-tokens/new
+    required: true
+
+env:
+  GITHUB_PERSONAL_ACCESS_TOKEN: "${github_token}"

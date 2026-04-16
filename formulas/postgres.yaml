@@ -1,0 +1,24 @@
+name: postgres
+description: Query Postgres — schema inspection and read-only SQL via connection string.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/postgres
+tags: [db, postgres, node]
+
+transport: stdio
+runtime: node
+package: "@modelcontextprotocol/server-postgres"
+# Connection string is passed as the first positional arg. Edit after install
+# or set via the 'postgres_url' secret.
+args: ["${postgres_url}"]
+
+# Runs SQL against a remote DB — safe to execute from the Pier host so DB creds
+# only live on the homelab. Flip to 'local' if you'd rather each client connect
+# directly with its own DATABASE_URL.
+remote_eligible: true
+
+secrets:
+  - key: postgres_url
+    label: Postgres Connection String
+    help: postgresql://user:pass@host:5432/db
+    required: true
+
+env: {}

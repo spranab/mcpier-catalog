@@ -1,0 +1,20 @@
+name: stripe
+description: Official Stripe integration — customers, payments, products, subscriptions.
+homepage: https://github.com/stripe/agent-toolkit
+tags: [payments, stripe, node]
+
+transport: stdio
+runtime: node
+package: "@stripe/mcp"
+args: [--tools=all]
+
+remote_eligible: true
+
+secrets:
+  - key: stripe_secret_key
+    label: Stripe Secret Key (sk_…)
+    help: https://dashboard.stripe.com/apikeys
+    required: true
+
+env:
+  STRIPE_SECRET_KEY: "${stripe_secret_key}"

@@ -1,0 +1,20 @@
+name: google-maps
+description: Place search, directions, geocoding via Google Maps API.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps
+tags: [maps, geo, node]
+
+transport: stdio
+runtime: node
+package: "@modelcontextprotocol/server-google-maps"
+args: []
+
+remote_eligible: true
+
+secrets:
+  - key: google_maps_key
+    label: Google Maps API Key
+    help: https://developers.google.com/maps/documentation/javascript/get-api-key
+    required: true
+
+env:
+  GOOGLE_MAPS_API_KEY: "${google_maps_key}"

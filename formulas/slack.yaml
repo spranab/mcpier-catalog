@@ -1,0 +1,25 @@
+name: slack
+description: Slack workspace integration — channels, messages, users, reactions.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/slack
+tags: [chat, slack, node]
+
+transport: stdio
+runtime: node
+package: "@modelcontextprotocol/server-slack"
+args: []
+
+remote_eligible: true
+
+secrets:
+  - key: slack_bot_token
+    label: Slack Bot User OAuth Token
+    help: https://api.slack.com/authentication/token-types#bot
+    required: true
+  - key: slack_team_id
+    label: Slack Team ID (starts with T…)
+    help: https://slack.com/help/articles/221769328-Locate-your-Slack-URL-or-ID
+    required: true
+
+env:
+  SLACK_BOT_TOKEN: "${slack_bot_token}"
+  SLACK_TEAM_ID: "${slack_team_id}"

@@ -1,0 +1,25 @@
+name: cloudflare
+description: Official Cloudflare integration — Workers, KV, R2, D1, Pages, DNS.
+homepage: https://github.com/cloudflare/mcp-server-cloudflare
+tags: [edge, cloudflare, node]
+
+transport: stdio
+runtime: node
+package: "@cloudflare/mcp-server-cloudflare"
+args: []
+
+remote_eligible: true
+
+secrets:
+  - key: cloudflare_api_token
+    label: Cloudflare API Token
+    help: https://dash.cloudflare.com/profile/api-tokens
+    required: true
+  - key: cloudflare_account_id
+    label: Cloudflare Account ID
+    help: https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/
+    required: true
+
+env:
+  CLOUDFLARE_API_TOKEN: "${cloudflare_api_token}"
+  CLOUDFLARE_ACCOUNT_ID: "${cloudflare_account_id}"

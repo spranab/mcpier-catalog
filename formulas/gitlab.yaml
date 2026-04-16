@@ -1,0 +1,22 @@
+name: gitlab
+description: GitLab projects, issues, merge requests, and file operations.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab
+tags: [git, gitlab, node]
+
+transport: stdio
+runtime: node
+package: "@modelcontextprotocol/server-gitlab"
+args: []
+
+remote_eligible: true
+
+secrets:
+  - key: gitlab_token
+    label: GitLab Personal Access Token
+    help: https://gitlab.com/-/user_settings/personal_access_tokens
+    required: true
+
+env:
+  GITLAB_PERSONAL_ACCESS_TOKEN: "${gitlab_token}"
+  # Override for self-hosted GitLab — set via PIER secret or edit after install.
+  GITLAB_API_URL: https://gitlab.com/api/v4

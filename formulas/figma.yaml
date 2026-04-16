@@ -1,0 +1,20 @@
+name: figma
+description: Figma design context — read files, inspect frames, extract layers.
+homepage: https://github.com/GLips/Figma-Context-MCP
+tags: [design, figma, node]
+
+transport: stdio
+runtime: node
+package: figma-developer-mcp
+args: [--stdio]
+
+remote_eligible: true
+
+secrets:
+  - key: figma_api_key
+    label: Figma Personal Access Token
+    help: https://www.figma.com/developers/api#access-tokens
+    required: true
+
+env:
+  FIGMA_API_KEY: "${figma_api_key}"

@@ -1,0 +1,24 @@
+name: sentry
+description: Official Sentry integration — issues, events, orgs, projects.
+homepage: https://github.com/getsentry/sentry-mcp
+tags: [observability, sentry, node]
+
+transport: stdio
+runtime: node
+package: "@sentry/mcp-server"
+args: []
+
+remote_eligible: true
+
+secrets:
+  - key: sentry_auth_token
+    label: Sentry User Auth Token
+    help: https://sentry.io/settings/account/api/auth-tokens/
+    required: true
+  - key: sentry_host
+    label: Sentry host (omit for sentry.io)
+    required: false
+
+env:
+  SENTRY_AUTH_TOKEN: "${sentry_auth_token}"
+  SENTRY_HOST: "${sentry_host}"

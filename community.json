@@ -1,0 +1,125 @@
+{
+  "name": "mcpier-community",
+  "version": 1,
+  "updated": "2026-04-16",
+  "description": "Community feed — third-party vendor integrations (Stripe, Cloudflare, Notion, etc). Looser curation than the main catalog; vendors maintain their own MCPs upstream.",
+  "entries": [
+    {
+      "name": "github",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "GitHub repos, issues, PRs, and file operations via the GitHub REST API.",
+      "tags": ["git", "github", "node", "community"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/github.yaml"
+    },
+    {
+      "name": "gitlab",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "GitLab projects, issues, merge requests, and file operations.",
+      "tags": ["git", "gitlab", "node", "community"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/gitlab.yaml"
+    },
+    {
+      "name": "google-maps",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Place search, directions, and geocoding via Google Maps API.",
+      "tags": ["maps", "geo", "node", "community"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/google-maps.yaml"
+    },
+    {
+      "name": "brave-search",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Web search via the Brave Search API.",
+      "tags": ["search", "web", "node", "community"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/brave-search.yaml"
+    },
+    {
+      "name": "postgres",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Query Postgres — schema inspection and read-only SQL via connection string.",
+      "tags": ["db", "postgres", "node", "community"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/postgres.yaml"
+    },
+    {
+      "name": "slack",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Slack workspace integration — channels, messages, users, reactions.",
+      "tags": ["chat", "slack", "node", "community"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/slack.yaml"
+    },
+    {
+      "name": "sqlite",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Query a SQLite database (Python reference).",
+      "tags": ["db", "sqlite", "python", "community"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/sqlite.yaml"
+    },
+    {
+      "name": "stripe",
+      "source": "github:stripe/agent-toolkit",
+      "description": "Official Stripe integration — customers, payments, products, subscriptions.",
+      "tags": ["payments", "stripe", "node", "community"],
+      "homepage": "https://github.com/stripe/agent-toolkit",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/stripe.yaml"
+    },
+    {
+      "name": "cloudflare",
+      "source": "github:cloudflare/mcp-server-cloudflare",
+      "description": "Official Cloudflare integration — Workers, KV, R2, D1, Pages, DNS.",
+      "tags": ["edge", "cloudflare", "node", "community"],
+      "homepage": "https://github.com/cloudflare/mcp-server-cloudflare",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/cloudflare.yaml"
+    },
+    {
+      "name": "notion",
+      "source": "github:makenotion/notion-mcp-server",
+      "description": "Official Notion integration — pages, databases, blocks.",
+      "tags": ["docs", "notion", "node", "community"],
+      "homepage": "https://github.com/makenotion/notion-mcp-server",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/notion.yaml"
+    },
+    {
+      "name": "sentry",
+      "source": "github:getsentry/sentry-mcp",
+      "description": "Official Sentry integration — issues, events, orgs, projects.",
+      "tags": ["observability", "sentry", "node", "community"],
+      "homepage": "https://github.com/getsentry/sentry-mcp",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/sentry.yaml"
+    },
+    {
+      "name": "figma",
+      "source": "github:GLips/Figma-Context-MCP",
+      "description": "Figma design context — read files, inspect frames, extract layers.",
+      "tags": ["design", "figma", "node", "community"],
+      "homepage": "https://github.com/GLips/Figma-Context-MCP",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/figma.yaml"
+    },
+    {
+      "name": "puppeteer",
+      "source": "github:modelcontextprotocol/servers",
+      "description": "Headless browser automation via Puppeteer.",
+      "tags": ["browser", "automation", "node", "community"],
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/puppeteer.yaml"
+    }
+  ]
+}

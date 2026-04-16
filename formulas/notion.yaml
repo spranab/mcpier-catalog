@@ -1,0 +1,21 @@
+name: notion
+description: Official Notion integration — pages, databases, blocks.
+homepage: https://github.com/makenotion/notion-mcp-server
+tags: [docs, notion, node]
+
+transport: stdio
+runtime: node
+package: "@notionhq/notion-mcp-server"
+args: []
+
+remote_eligible: true
+
+secrets:
+  - key: notion_token
+    label: Notion Integration Token (secret_…)
+    help: https://www.notion.so/profile/integrations
+    required: true
+
+env:
+  # Notion expects an HTTP Bearer header via its OPENAPI_MCP_HEADERS convention.
+  OPENAPI_MCP_HEADERS: '{"Authorization":"Bearer ${notion_token}","Notion-Version":"2022-06-28"}'

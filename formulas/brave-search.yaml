@@ -1,0 +1,20 @@
+name: brave-search
+description: Web search via Brave Search API.
+homepage: https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search
+tags: [search, web, node]
+
+transport: stdio
+runtime: node
+package: "@modelcontextprotocol/server-brave-search"
+args: []
+
+remote_eligible: true
+
+secrets:
+  - key: brave_api_key
+    label: Brave Search API Key
+    help: https://api.search.brave.com/app/keys
+    required: true
+
+env:
+  BRAVE_API_KEY: "${brave_api_key}"
