@@ -1,0 +1,23 @@
+name: saga-mcp
+description: Jira-like project tracker for AI agents — projects, epics, tasks, subtasks, comments, templates. SQLite-backed, zero external services.
+homepage: https://github.com/spranab/saga-mcp
+tags: [project-management, sqlite, node]
+
+transport: stdio
+runtime: node
+package: saga-mcp
+args: []
+
+# Reads/writes a SQLite file on disk. Running remotely on Pier is fine
+# (Pier holds the DB for all clients) but you lose the "my own tracker
+# per project" pattern — most users want location: local.
+remote_eligible: true
+
+secrets:
+  - key: saga_db_path
+    label: SQLite DB path (absolute path to .tracker.db)
+    help: https://github.com/spranab/saga-mcp#configuration
+    required: true
+
+env:
+  DB_PATH: "${saga_db_path}"

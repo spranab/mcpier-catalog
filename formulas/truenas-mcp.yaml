@@ -1,0 +1,30 @@
+name: truenas-mcp
+description: Comprehensive TrueNAS SCALE integration — 278 actions covering storage pools, datasets, snapshots, SMB/NFS/iSCSI shares, VMs, Docker apps, users, disks, alerts, certificates, and the full REST API v2.0.
+homepage: https://github.com/spranab/truenas-mcp
+tags: [truenas, storage, nas, homelab, node]
+
+transport: stdio
+runtime: node
+package: truenas-mcp
+args: []
+
+# Pure REST API wrapper — safe to run remotely on Pier; credentials never
+# touch client machines. Ideal homelab pattern.
+remote_eligible: true
+
+secrets:
+  - key: truenas_url
+    label: TrueNAS URL (e.g. https://truenas.local)
+    required: true
+  - key: truenas_api_key
+    label: TrueNAS API Key (Settings → API Keys → Add)
+    help: https://www.truenas.com/docs/scale/scaletutorials/toptoolbar/managingapikeys/
+    required: true
+  - key: truenas_verify_ssl
+    label: Verify SSL (set to 'false' for self-signed certs)
+    required: false
+
+env:
+  TRUENAS_URL: "${truenas_url}"
+  TRUENAS_API_KEY: "${truenas_api_key}"
+  TRUENAS_VERIFY_SSL: "${truenas_verify_ssl}"

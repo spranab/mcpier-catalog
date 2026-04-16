@@ -1,0 +1,23 @@
+name: discord-mcp
+description: Discord integration — read/send messages, manage channels and roles from an AI agent.
+homepage: https://github.com/spranab/discord-mcp
+tags: [discord, chat, node]
+
+transport: stdio
+runtime: node
+package: "@spranab/discord-mcp"
+args: []
+
+# Wraps Discord's REST/Gateway API — stateless from Pier's perspective.
+# Great remote candidate: the bot token lives on Pier only.
+remote_eligible: true
+
+secrets:
+  - key: discord_bot_token
+    label: Discord Bot Token
+    help: https://discord.com/developers/applications
+    required: true
+
+env:
+  # README uses lowercase 'bot_token' — preserving that.
+  bot_token: "${discord_bot_token}"

@@ -1,0 +1,31 @@
+name: swarmcode
+description: Real-time cross-machine communication between Claude Code instances via Redis pub/sub. Per-workspace isolation, message backup polling, web dashboard.
+homepage: https://github.com/spranab/swarmcode
+tags: [swarm, multi-agent, redis, python]
+
+transport: stdio
+runtime: python
+package: swarmcode
+args: []
+
+# Requires a reachable Redis. Remote mode makes sense if all your clients
+# can reach the same Pier host + Redis URL — they share one channel.
+# Local mode requires every client to have Redis access independently.
+remote_eligible: true
+
+secrets:
+  - key: swarmcode_redis_url
+    label: Redis URL (redis://host:port)
+    help: https://github.com/spranab/swarmcode#quick-start
+    required: true
+  - key: dashboard_user
+    label: Dashboard basic-auth username (optional, for the web UI)
+    required: false
+  - key: dashboard_password
+    label: Dashboard basic-auth password (optional)
+    required: false
+
+env:
+  SWARMCODE_REDIS_URL: "${swarmcode_redis_url}"
+  DASHBOARD_USER: "${dashboard_user}"
+  DASHBOARD_PASSWORD: "${dashboard_password}"

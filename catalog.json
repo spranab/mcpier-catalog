@@ -76,6 +76,7 @@
       "verified": true,
       "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/context7.yaml"
     },
+
     {
       "name": "brainstorm-mcp",
       "source": "github:spranab/brainstorm-mcp",
@@ -86,11 +87,47 @@
       "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/brainstorm-mcp.yaml"
     },
     {
-      "name": "yantrikdb",
-      "source": "github:spranab/yantrikdb",
-      "description": "Persistent cognitive memory — recall/remember/graph across conversations.",
+      "name": "saga-mcp",
+      "source": "github:spranab/saga-mcp",
+      "description": "Jira-like project tracker for AI agents — projects, epics, tasks, subtasks, comments, templates. SQLite-backed, zero external services.",
+      "tags": ["project-management", "sqlite", "node"],
+      "homepage": "https://github.com/spranab/saga-mcp",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/saga-mcp.yaml"
+    },
+    {
+      "name": "discord-mcp",
+      "source": "github:spranab/discord-mcp",
+      "description": "Discord integration — read/send messages, manage channels and roles from an AI agent.",
+      "tags": ["discord", "chat", "node"],
+      "homepage": "https://github.com/spranab/discord-mcp",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/discord-mcp.yaml"
+    },
+    {
+      "name": "truenas-mcp",
+      "source": "github:spranab/truenas-mcp",
+      "description": "Comprehensive TrueNAS SCALE integration — 278 actions covering storage, shares, VMs, Docker, users, alerts, and the full REST API.",
+      "tags": ["truenas", "storage", "nas", "homelab", "node"],
+      "homepage": "https://github.com/spranab/truenas-mcp",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/truenas-mcp.yaml"
+    },
+    {
+      "name": "swarmcode",
+      "source": "github:spranab/swarmcode",
+      "description": "Real-time cross-machine communication between Claude Code instances via Redis pub/sub. Per-workspace isolation, web dashboard.",
+      "tags": ["swarm", "multi-agent", "redis", "python"],
+      "homepage": "https://github.com/spranab/swarmcode",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/swarmcode.yaml"
+    },
+    {
+      "name": "yantrikdb-mcp",
+      "source": "github:yantrikos/yantrikdb-mcp",
+      "description": "Persistent cognitive memory engine — recall/remember/graph/relate/correct across conversations. Hierarchical, embedding-backed, self-updating.",
       "tags": ["memory", "python", "ai"],
-      "homepage": "https://github.com/spranab/yantrikdb",
+      "homepage": "https://github.com/yantrikos/yantrikdb-mcp",
       "verified": true,
       "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/yantrikdb.yaml"
     }
