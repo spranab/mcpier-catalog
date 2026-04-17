@@ -17,3 +17,9 @@ remote_eligible: false
 
 secrets: []
 env: {}
+
+auto_activate:
+  # Matches any workspace that has a .git directory.
+  triggers:
+    - kind: file
+      path: .git

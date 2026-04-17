@@ -22,3 +22,9 @@ secrets:
     required: true
 
 env: {}
+
+auto_activate:
+  # Any workspace with SQL files — ORM migrations, seeds, ad-hoc queries.
+  triggers:
+    - kind: glob
+      pattern: "**/*.sql"

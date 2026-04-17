@@ -13,3 +13,8 @@ remote_eligible: true
 
 secrets: []
 env: {}
+
+auto_activate:
+  # Broadly useful in any workspace — HTTP fetch is the default "look things up" tool.
+  triggers:
+    - kind: always

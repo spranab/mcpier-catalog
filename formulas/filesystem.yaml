@@ -15,3 +15,8 @@ remote_eligible: false
 
 secrets: []
 env: {}
+
+auto_activate:
+  # Any real project folder benefits from filesystem tools.
+  triggers:
+    - kind: always

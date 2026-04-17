@@ -21,3 +21,10 @@ secrets:
 
 env:
   DB_PATH: "${saga_db_path}"
+
+auto_activate:
+  # Active when a project opts in with a marker file. Otherwise user-pinned
+  # via `pier activate saga-mcp`.
+  triggers:
+    - kind: file
+      path: .saga.json

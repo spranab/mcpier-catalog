@@ -13,3 +13,8 @@ remote_eligible: true
 
 secrets: []
 env: {}
+
+auto_activate:
+  # Pure-logic reasoning aid — useful in any workspace.
+  triggers:
+    - kind: always
