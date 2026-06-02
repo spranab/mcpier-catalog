@@ -1,0 +1,27 @@
+name: icantmarket-mcp
+description: Browse verified products, browse open asks, post structured asks, and submit reviews on icantmarket — a verified help-exchange for technical founders.
+homepage: https://github.com/spranab/icantmarket-mcp
+tags: [help-exchange, asks, reviews, node, founders]
+
+transport: stdio
+runtime: node
+package: icantmarket-mcp
+args: []
+
+# Calls the public icantmarket.com API. No local state, no DB. Running
+# remotely on Pier is fully fine — there's nothing per-host.
+remote_eligible: true
+
+secrets:
+  - key: icantmarket_api_token
+    label: icantmarket API token (Bearer ic_<24hex>)
+    help: https://icantmarket.com/me/api-tokens
+    required: false
+
+env:
+  ICANTMARKET_API_TOKEN: "${icantmarket_api_token}"
+
+# No auto-activation trigger by default. User-pinned via
+# `pier activate icantmarket-mcp`. The 4 read tools work without a
+# token; the 3 write tools (post_ask, submit_review, whoami) require
+# one. Mint at https://icantmarket.com/me/api-tokens.

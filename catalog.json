@@ -1,7 +1,7 @@
 {
   "name": "mcpier-official",
   "version": 1,
-  "updated": "2026-04-16",
+  "updated": "2026-06-02",
   "description": "A small curated set to get started. For everything else, use 'Install from Git' in the UI or `pier install-git <url>` — any MCP repo with a pier.yaml is one paste away.",
   "entries": [
     {
@@ -94,6 +94,15 @@
       "homepage": "https://github.com/spranab/saga-mcp",
       "verified": true,
       "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/saga-mcp.yaml"
+    },
+    {
+      "name": "icantmarket-mcp",
+      "source": "github:spranab/icantmarket-mcp",
+      "description": "Browse verified products, browse open asks, post structured asks, and submit reviews on icantmarket — a verified help-exchange for technical founders.",
+      "tags": ["help-exchange", "asks", "reviews", "node", "founders"],
+      "homepage": "https://github.com/spranab/icantmarket-mcp",
+      "verified": true,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/icantmarket-mcp.yaml"
     },
     {
       "name": "discord-mcp",
