@@ -120,6 +120,15 @@
       "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
       "verified": true,
       "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/puppeteer.yaml"
+    },
+    {
+      "name": "xquik",
+      "source": "github:Xquik-dev/x-twitter-scraper",
+      "description": "Remote X (Twitter) MCP server for X data, posting, monitoring, and workflow automation.",
+      "tags": ["x", "twitter", "social-media", "automation", "http", "community"],
+      "homepage": "https://github.com/Xquik-dev/x-twitter-scraper",
+      "verified": false,
+      "formula_url": "https://raw.githubusercontent.com/spranab/mcpier-catalog/main/formulas/xquik.yaml"
     }
   ]
 }

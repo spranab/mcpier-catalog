@@ -1,0 +1,18 @@
+name: xquik
+description: Remote X (Twitter) MCP server for X data, posting, monitoring, and workflow automation.
+homepage: https://github.com/Xquik-dev/x-twitter-scraper
+tags: [x, twitter, social-media, automation, http]
+
+transport: http
+url: https://xquik.com/mcp
+
+remote_eligible: true
+
+secrets:
+  - key: xquik_api_key
+    label: Xquik API Key
+    help: https://docs.xquik.com/api-reference/authentication
+    required: true
+
+headers:
+  Authorization: "Bearer ${xquik_api_key}"
