@@ -1,0 +1,20 @@
+name: statsnet
+description: >-
+  Background check any company in the world: registration, executives, courts and finances.
+homepage: https://github.com/usenetstate/statsnet-mcp
+tags: [company-data, osint, background-check, remote, business]
+
+# Remote HTTP MCP — no local package. Clients connect to the public endpoint.
+transport: http
+url: https://statsnet.co/mcp
+
+remote_eligible: true
+
+secrets:
+  - key: statsnet_api_key
+    label: Statsnet API Key (optional for higher limits)
+    help: https://statsnet.co
+    required: false
+
+env:
+  STATSNET_API_KEY: "${statsnet_api_key}"
